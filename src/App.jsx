@@ -1,13 +1,20 @@
 
 import './App.css'
+import HeroBanner from './components/HeroBanner'
+import NavBar from './components/NavBar'
 
 function App() {
- 
+
 
   return (
     <>
-     <h1 className='text-3xl'>Get started</h1>
-     <button className='btn btn-primary'>Buton Clicked</button>
+      <NavBar></NavBar>
+
+      <div className='mt-5'>
+        <HeroBanner></HeroBanner>
+      </div>
+
+
     </>
   )
 }

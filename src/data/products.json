@@ -1,0 +1,101 @@
+[
+  {
+    "id": 1,
+    "name": "Resume Builder Pro",
+    "description": "Professional resume builder with AI-powered suggestions",
+    "price": 49,
+    "period": "one-time",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": ["100+ templates", "ATS optimization", "Export to PDF"],
+    "icon": "📄"
+  },
+  {
+    "id": 2,
+    "name": "Portfolio Website Kit",
+    "description": "Create stunning developer portfolios easily",
+    "price": 19,
+    "period": "one-time",
+    "tag": "new",
+    "tagType": "new",
+    "features": ["Responsive design", "SEO ready", "Easy customization"],
+    "icon": "🌐"
+  },
+  {
+    "id": 3,
+    "name": "AI Code Assistant",
+    "description": "Boost coding productivity using AI",
+    "price": 15,
+    "period": "monthly",
+    "tag": "best seller",
+    "tagType": "best seller",
+    "features": ["Auto code generation", "Bug fixing", "Code explanation"],
+    "icon": "🤖"
+  },
+  {
+    "id": 4,
+    "name": "UI Component Library",
+    "description": "Pre-built UI components for fast development",
+    "price": 29,
+    "period": "one-time",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": ["Reusable components", "Dark mode", "Customizable"],
+    "icon": "🎨"
+  },
+  {
+    "id": 5,
+    "name": "React Starter Kit",
+    "description": "Kickstart React projects quickly",
+    "price": 25,
+    "period": "one-time",
+    "tag": "new",
+    "tagType": "new",
+    "features": ["Routing setup", "Auth system", "Best practices"],
+    "icon": "⚛️"
+  },
+  {
+    "id": 6,
+    "name": "E-commerce Template",
+    "description": "Complete eCommerce UI template",
+    "price": 59,
+    "period": "one-time",
+    "tag": "best seller",
+    "tagType": "best seller",
+    "features": ["Cart system", "Checkout UI", "Responsive"],
+    "icon": "🛒"
+  },
+  {
+    "id": 7,
+    "name": "SEO Booster Tool",
+    "description": "Improve your website SEO ranking",
+    "price": 10,
+    "period": "monthly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": ["Keyword analysis", "Site audit", "Reports"],
+    "icon": "📊"
+  },
+  {
+    "id": 8,
+    "name": "Landing Page Builder",
+    "description": "Build high-converting landing pages",
+    "price": 35,
+    "period": "one-time",
+    "tag": "new",
+    "tagType": "new",
+    "features": ["Drag & drop", "Templates", "Fast loading"],
+    "icon": "🚀"
+  },
+  {
+    "id": 9,
+    "name": "Analytics Dashboard",
+    "description": "Track performance with advanced analytics",
+    "price": 20,
+    "period": "monthly",
+    "tag": "best seller",
+    "tagType": "best seller",
+    "features": ["Real-time data", "Charts", "Export reports"],
+    "icon": "📈"
+  }
+]

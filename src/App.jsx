@@ -1,5 +1,6 @@
 
 import './App.css'
+import Banner from './components/Banner'
 import HeroBanner from './components/HeroBanner'
 import NavBar from './components/NavBar'
 
@@ -10,10 +11,10 @@ function App() {
     <>
       <NavBar></NavBar>
 
-      <div className='mt-5'>
+      <div className='my-5'>
         <HeroBanner></HeroBanner>
       </div>
-
+      <Banner></Banner>
 
     </>
   )

@@ -11,14 +11,14 @@ const Pricing = () => {
 
             </div>
 
-            <div className='flex justify-between gap-5 mt-5'>
+            <div className='flex justify-between items-stretch gap-5 mt-5'>
 
 
 
 
-                <div className="card w-96 bg-base-100 shadow-sm h-full">
-                    <div className="card-body">
-                        
+                <div className="card w-96 bg-base-100 shadow-sm flex-1">
+                    <div className="card-body relative">
+
                         <div >
                             <h2 className="text-3xl font-bold">Starter</h2>
                             <p className="mb-5">Perfect for getting started</p>
@@ -41,11 +41,11 @@ const Pricing = () => {
                                 <svg xmlns="http://www.w3.org/2000/svg" className="size-4 me-2 inline-block text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
                                 <span> 1 project per month </span>
                             </li>
-                            
+
 
                         </ul>
-                        <div className="mt-6">
-                            
+                        <div className="mt-6 absolute bottom-5">
+
                             <button className="btn bg-gradient-to-r from-[#4F39F6] to-[#9514FA]  text-white font-bold btn-block rounded-full">Get Started Free</button>
                         </div>
                     </div>
@@ -54,9 +54,9 @@ const Pricing = () => {
 
 
 
-                 <div className="card w-96 bg-base-100 shadow-sm h-full">
+                <div className="card w-96 bg-base-100 shadow-sm flex-1">
                     <div className="card-body relative rounded-xl bg-gradient-to-r from-[#4F39F6] to-[#9514FA]  text-white font-bold">
-                        <span className="badge badge-xs badge-warning absolute top-[-5px] right-[60px]">Most Popular</span>
+                        <span className="badge badge-xs badge-warning absolute top-[-5px] left-1/2 -translate-x-1/2">Most Popular</span>
                         <div >
                             <h2 className="text-3xl font-bold">Pro</h2>
                             <p className="mb-5">Best for professionals</p>
@@ -87,11 +87,11 @@ const Pricing = () => {
                                 <svg xmlns="http://www.w3.org/2000/svg" className="size-4 me-2 inline-block text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
                                 <span> Advanced analytics </span>
                             </li>
-                            
+
 
                         </ul>
                         <div className="mt-6">
-                            
+
                             <button className="btn   text-purple-600 font-bold btn-block rounded-full">Get Started Free</button>
                         </div>
                     </div>
@@ -101,9 +101,9 @@ const Pricing = () => {
 
 
 
-                 <div className="card w-96 bg-base-100 shadow-sm h-full">
+                <div className="card w-96 bg-base-100 shadow-sm flex-1">
                     <div className="card-body">
-                        
+
                         <div >
                             <h2 className="text-3xl font-bold">Enterprise</h2>
                             <p className="mb-5">For teams and businesses </p>
@@ -134,11 +134,11 @@ const Pricing = () => {
                                 <svg xmlns="http://www.w3.org/2000/svg" className="size-4 me-2 inline-block text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
                                 <span> Custom branding </span>
                             </li>
-                            
+
 
                         </ul>
                         <div className="mt-6">
-                            
+
                             <button className="btn bg-gradient-to-r from-[#4F39F6] to-[#9514FA]  text-white font-bold btn-block rounded-full">Contact Sales</button>
                         </div>
                     </div>
@@ -149,8 +149,6 @@ const Pricing = () => {
 
 
             </div>
-
-
 
 
 

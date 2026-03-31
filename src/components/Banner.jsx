@@ -1,6 +1,6 @@
 const Banner = () => {
     return (
-        <div className='  w-full h-full bg-purple-700  mx-auto'>
+        <div className='  w-full  bg-gradient-to-r from-[#4F39F6] to-[#9514FA]  mx-auto'>
 
             <div className="flex items-center justify-center gap-x-16 ">
                 <div className="flex flex-col items-center gap-1 p-5">

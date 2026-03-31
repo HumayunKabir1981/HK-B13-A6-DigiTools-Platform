@@ -1,4 +1,10 @@
-const CardItems = () => {
+import { use } from "react";
+
+const CardItems = ({ cardPromis }) => {
+
+    const data=use(cardPromis)
+    console.log(data.length);
+    
     return (
         <div className=' w-full md:w-4/5  mx-auto  '>
 

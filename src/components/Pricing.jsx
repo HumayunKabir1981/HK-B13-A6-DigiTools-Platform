@@ -44,7 +44,7 @@ const Pricing = () => {
 
 
                         </ul>
-                        <div className="mt-6 absolute bottom-5">
+                        <div className=" absolute bottom-5 w-4/5">
 
                             <button className="btn bg-gradient-to-r from-[#4F39F6] to-[#9514FA]  text-white font-bold btn-block rounded-full">Get Started Free</button>
                         </div>

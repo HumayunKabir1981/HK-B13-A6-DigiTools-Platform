@@ -1,4 +1,5 @@
 
+import { Suspense } from 'react'
 import './App.css'
 import Banner from './components/Banner'
 import CardItems from './components/CardItems'
@@ -10,8 +11,16 @@ import NavBar from './components/NavBar'
 import Pricing from './components/Pricing'
 import WorkFlow from './components/WorkFlow'
 
-function App() {
 
+const fetchCard = async () => {
+  const res = await fetch("/data/products.json");
+
+
+  return res.json();
+}
+
+function App() {
+  const cardPromis = fetchCard();
 
   return (
     <>
@@ -22,7 +31,11 @@ function App() {
       </div>
       <Banner></Banner>
       <div className='mt-10'>
-        <CardItems></CardItems>
+
+        <Suspense fallback={<span className="loading loading-spinner loading-xl"></span>}>
+          <CardItems cardPromis={cardPromis}></CardItems>
+        </Suspense>
+
       </div>
       <GetStarted></GetStarted>
 

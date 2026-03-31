@@ -8,7 +8,7 @@ const WorkFlow = () => {
 
 
 
-            <div className="flex flex-col items-center justify-center gap-x-16 text-white pt-20 ">
+            <div className="flex flex-col items-center justify-center gap-x-16 text-white py-20 ">
                 <div className="flex flex-col justify-center items-center">
                     <h1 className="text-4xl font-bold">Ready to Transform Your Workflow?</h1>
                     <p className="text-center py-3">Join thousands of professionals who are already using Digitools to work smarter.

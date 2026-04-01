@@ -1,12 +1,12 @@
 import React from 'react';
 import { BsCart } from "react-icons/bs";
 
-const NavBar = ({cartCount }) => {
+const NavBar = ({ cartCount }) => {
     return (
         <div className="w-full md:w-4/5  mx-auto">
             <div className="navbar bg-base-100 shadow-sm">
                 <div className="navbar-start">
-                    
+
                     <h2 className=" text-4xl font-bold text-[#4F39F6]">  DigiTools</h2>
                 </div>
 
@@ -20,21 +20,31 @@ const NavBar = ({cartCount }) => {
 
                     </ul>
                 </div>
-                <div className="navbar-end">
-                      <span>  <BsCart /></span>
-                      <span> {cartCount} </span>
+                <div className="navbar-end ">
+
+                    <div className="relative inline-block">
+                        <span>
+                            <BsCart className="text-2xl" />
+                        </span>
+
+                        <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
+                            {cartCount}
+                        </span>
+                    </div>
+
+
                     <ul className=" list-style: none menu menu-horizontal items-center">
-                    
+
                         <li><a>Login</a></li>
                         <li> <button className="px-6 py-2 bg-gradient-to-r from-[#4F39F6] to-[#9514FA] text-white font-bold rounded-full shadow-lg">
-  Get Started
-</button> </li>
+                            Get Started
+                        </button> </li>
                     </ul>
 
                 </div>
             </div>
 
-     
+
         </div>
     );
 };

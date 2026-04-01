@@ -1,5 +1,6 @@
 import { use, useState } from "react";
 import Card from "./Card";
+import { IoCartOutline } from "react-icons/io5";
 
 const CardItems = ({ cardPromis, cart, handleAddToCart, handleRemove, handleCheckout }) => {
     const data = use(cardPromis);
@@ -55,12 +56,22 @@ const CardItems = ({ cardPromis, cart, handleAddToCart, handleRemove, handleChec
             {view === "cart" && (
                 <div className="p-4 border rounded-lg">
 
-                    <h1>Your Card</h1>
+                    <h1 className="text-2xl font-bold">Your Card</h1>
 
-                    {cart.length === 0 && <p className="flex justify-center items-center">Your Card is Empty</p>}
+                    {cart.length === 0 && (
+                        <div className="flex flex-col justify-center items-center h-40 text-gray-500">
+
+                            <IoCartOutline className="text-9xl mb-3" />
+
+                            <p className="text-4xl font-medium pb-10">
+                                Your Cart is Empty
+                            </p>
+
+                        </div>
+                    )}
 
                     {cart.map((item) => (
-                        <div key={item.id} className="flex justify-between items-center border-b py-2">
+                        <div key={item.id} className="flex justify-between items-center rounded-xl shadow py-2">
 
                             <div className="flex gap-5">
                                 <span>{item.icon}</span>
@@ -69,7 +80,7 @@ const CardItems = ({ cardPromis, cart, handleAddToCart, handleRemove, handleChec
                                     <span>${item.price}</span>
                                 </div>
                             </div>
-                           
+
 
                             <button
                                 onClick={() => handleRemove(item.id)}
@@ -82,19 +93,25 @@ const CardItems = ({ cardPromis, cart, handleAddToCart, handleRemove, handleChec
 
                     {/* Total */}
 
-                    <div className=" flex justify-between mt-4 font-bold text-lg">
-                        <h1>Total</h1>
-                        <span>${total}</span>
-
-                    </div>
 
 
-                    <button
-                        onClick={handleCheckout}
-                        className="btn bg-gradient-to-r from-[#4F39F6] to-[#9514FA] text-white font-bold btn-block rounded-full"
-                    >
-                        Checkout
-                    </button>
+                    {cart.length > 0 && (
+                        <div className=" flex justify-between mt-4 font-bold text-lg">
+                            <h1>Total</h1>
+                            <span>${total}</span>
+
+                        </div>
+                    )}
+
+
+                    {cart.length > 0 && (
+                        <button
+                            onClick={handleCheckout}
+                            className="btn bg-gradient-to-r from-[#4F39F6] to-[#9514FA] text-white font-bold btn-block rounded-full mt-4"
+                        >
+                            Checkout
+                        </button>
+                    )}
                 </div>
             )}
         </div>

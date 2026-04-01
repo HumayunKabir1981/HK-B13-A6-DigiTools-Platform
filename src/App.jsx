@@ -1,61 +1,75 @@
-
 import { Suspense, useState, useMemo } from 'react';
 import './App.css'
 import Banner from './components/Banner'
 import CardItems from './components/CardItems'
 import Footer from './components/Footer'
 import GetStarted from './components/GetStarted'
-
 import HeroBanner from './components/HeroBanner'
 import NavBar from './components/NavBar'
 import Pricing from './components/Pricing'
 import WorkFlow from './components/WorkFlow'
 
-
 const fetchCard = async () => {
   const res = await fetch("/data/products.json");
-
-
   return res.json();
 }
 
 function App() {
 
-
-
   const cardPromis = useMemo(() => fetchCard(), []);
 
-  const [cartCount, setCartCount] = useState(0);
+ 
+  const [cart, setCart] = useState([]);
 
-  const handleAddToCart = () => {
-    setCartCount(prev => prev + 1);
+ 
+  const handleAddToCart = (product) => {
+    setCart((prev) => [...prev, product]);
+  };
+
+  
+  const handleRemove = (id) => {
+    setCart((prev) => prev.filter((item) => item.id !== id));
+  };
+
+  
+  const handleCheckout = () => {
+    setCart([]);
   };
 
   return (
     <>
-      <NavBar cartCount={cartCount}></NavBar>
+
+
+      <div className="navbar bg-base-100 shadow-sm sticky top-0 z-50">
+        <NavBar cartCount={cart.length} />
+      </div>
 
       <div className='mt-24 mb-5'>
-        <HeroBanner></HeroBanner>
+        <HeroBanner />
       </div>
-      <Banner></Banner>
+
+      <Banner />
+
       <div className='mt-10'>
-
         <Suspense fallback={<span className="loading loading-spinner loading-xl"></span>}>
-          <CardItems cardPromis={cardPromis} 
-        handleAddToCart={handleAddToCart}
-        cartCount={cartCount}></CardItems>
+          <CardItems
+            cardPromis={cardPromis}
+            cart={cart}
+            handleAddToCart={handleAddToCart}
+            handleRemove={handleRemove}
+            handleCheckout={handleCheckout}
+          />
         </Suspense>
-
       </div>
-      <GetStarted></GetStarted>
+
+      <GetStarted />
 
       <div className='my-16'>
-        <Pricing></Pricing>
+        <Pricing />
       </div>
-      <WorkFlow></WorkFlow>
-      <Footer></Footer>
 
+      <WorkFlow />
+      <Footer />
     </>
   )
 }

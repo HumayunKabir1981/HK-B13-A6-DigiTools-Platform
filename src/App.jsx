@@ -1,5 +1,5 @@
 
-import { Suspense } from 'react'
+import { Suspense, useState, useMemo } from 'react';
 import './App.css'
 import Banner from './components/Banner'
 import CardItems from './components/CardItems'
@@ -20,11 +20,20 @@ const fetchCard = async () => {
 }
 
 function App() {
-  const cardPromis = fetchCard();
+
+
+
+  const cardPromis = useMemo(() => fetchCard(), []);
+
+  const [cartCount, setCartCount] = useState(0);
+
+  const handleAddToCart = () => {
+    setCartCount(prev => prev + 1);
+  };
 
   return (
     <>
-      <NavBar></NavBar>
+      <NavBar cartCount={cartCount}></NavBar>
 
       <div className='mt-24 mb-5'>
         <HeroBanner></HeroBanner>
@@ -33,7 +42,9 @@ function App() {
       <div className='mt-10'>
 
         <Suspense fallback={<span className="loading loading-spinner loading-xl"></span>}>
-          <CardItems cardPromis={cardPromis}></CardItems>
+          <CardItems cardPromis={cardPromis} 
+        handleAddToCart={handleAddToCart}
+        cartCount={cartCount}></CardItems>
         </Suspense>
 
       </div>

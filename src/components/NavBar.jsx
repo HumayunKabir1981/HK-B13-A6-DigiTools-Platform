@@ -1,7 +1,7 @@
 import React from 'react';
 import { BsCart } from "react-icons/bs";
 
-const NavBar = () => {
+const NavBar = ({cartCount }) => {
     return (
         <div className="w-full md:w-4/5  mx-auto">
             <div className="navbar bg-base-100 shadow-sm">
@@ -22,6 +22,7 @@ const NavBar = () => {
                 </div>
                 <div className="navbar-end">
                       <span>  <BsCart /></span>
+                      <span> {cartCount} </span>
                     <ul className=" list-style: none menu menu-horizontal items-center">
                     
                         <li><a>Login</a></li>

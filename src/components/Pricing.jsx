@@ -6,12 +6,12 @@ const Pricing = () => {
 
 
             <div className="flex flex-col justify-center items-center">
-                <h1 className="text-2xl font-bold">Simple, Transparent Pricing</h1>
+                <h1 className="text-4xl font-bold">Simple, Transparent Pricing</h1>
                 <p className="text-center py-2">Choose the plan that fits your needs. Upgrade or downgrade anytime. </p>
 
             </div>
 
-            <div className='flex justify-between items-stretch gap-5 mt-5'>
+            <div className='flex flex-col md:flex-row justify-between items-stretch gap-5 mt-5'>
 
 
 

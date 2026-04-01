@@ -8,7 +8,7 @@ const Footer = () => {
 
             <div className=' w-full md:w-4/5  mx-auto  '>
 
-                <div className=' text-white grid grid-cols-6 gap-5 py-20'>
+                <div className=' text-white grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-8 py-16'>
 
 
                     <div className="col-span-2">
@@ -64,7 +64,7 @@ const Footer = () => {
                 </div>
 
                 <div className="h-[1px] bg-gray-500 my-4"></div>
-                <div className="text-white flex justify-between py-5">
+                <div className="text-white flex flex-col md:flex-row justify-between py-5">
 
                     <h1 >© 2026 Digitools. All rights reserved.</h1>
                     

@@ -5,7 +5,7 @@ import { CiPlay1 } from "react-icons/ci";
 
 const HeroBanner = () => {
     return (
-        <div className='flex justify-between w-full md:w-4/5  mx-auto'>
+        <div className='flex flex-col-reverse md:flex-row items-center  justify-between w-full md:w-4/5  mx-auto'>
 
             <div>
 

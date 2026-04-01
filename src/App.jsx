@@ -8,6 +8,9 @@ import HeroBanner from './components/HeroBanner'
 import NavBar from './components/NavBar'
 import Pricing from './components/Pricing'
 import WorkFlow from './components/WorkFlow'
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { toast } from "react-toastify";
 
 const fetchCard = async () => {
   const res = await fetch("/data/products.json");
@@ -16,29 +19,35 @@ const fetchCard = async () => {
 
 function App() {
 
+
   const cardPromis = useMemo(() => fetchCard(), []);
 
- 
   const [cart, setCart] = useState([]);
 
- 
   const handleAddToCart = (product) => {
     setCart((prev) => [...prev, product]);
+    toast.success(`${product.name} added to cart 🛒`);
   };
 
-  
+
   const handleRemove = (id) => {
-    setCart((prev) => prev.filter((item) => item.id !== id));
+    const item = cart.find((i) => i.id === id);
+
+    setCart((prev) => prev.filter((i) => i.id !== id));
+
+    toast.error(`${item.name} removed ❌`);
   };
 
-  
+
   const handleCheckout = () => {
     setCart([]);
+
+    toast.success("Checkout successful 🎉");
   };
 
   return (
     <>
-
+      <ToastContainer position="top-right" autoClose={2000} />
 
       <div className="navbar bg-base-100 shadow-sm sticky top-0 z-50">
         <NavBar cartCount={cart.length} />
@@ -50,7 +59,7 @@ function App() {
 
       <Banner />
 
-      <div className='mt-10'>
+      <div className='my-10'>
         <Suspense fallback={<span className="loading loading-spinner loading-xl"></span>}>
           <CardItems
             cardPromis={cardPromis}
@@ -62,7 +71,9 @@ function App() {
         </Suspense>
       </div>
 
-      <GetStarted />
+      <div className='my-24'><GetStarted /></div>
+
+
 
       <div className='my-16'>
         <Pricing />

@@ -13,7 +13,13 @@ const CardItems = ({ cardPromis, cart, handleAddToCart, handleRemove, handleChec
     return (
         <div className="w-full md:w-4/5 mx-auto">
 
-            {/* Buttons */}
+            <div className="flex flex-col justify-center items-center">
+                <h1 className="text-4xl font-bold">Premium Digital Tools</h1>
+                <p className="text-center py-3">Choose from our curated collection of premium digital products designed <br />
+                    to boost your productivity and creativity. </p>
+
+            </div>
+
             <div className="flex justify-center gap-3 my-5">
                 <button
                     onClick={() => setView("products")}
@@ -109,7 +115,7 @@ const CardItems = ({ cardPromis, cart, handleAddToCart, handleRemove, handleChec
                             onClick={handleCheckout}
                             className="btn bg-gradient-to-r from-[#4F39F6] to-[#9514FA] text-white font-bold btn-block rounded-full mt-4"
                         >
-                            Checkout
+                            Proceed to Checkout
                         </button>
                     )}
                 </div>

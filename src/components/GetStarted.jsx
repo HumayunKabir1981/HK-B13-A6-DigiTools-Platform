@@ -10,7 +10,7 @@ const GetStarted = () => {
 
 
             <div className="flex flex-col justify-center items-center">
-                <h1 className="text-2xl font-bold">Get Started in 3 Steps</h1>
+                <h1 className="text-4xl font-bold">Get Started in 3 Steps</h1>
                 <p className="text-center py-2">Start using premium digital tools in minutes, not hours. </p>
 
             </div>
@@ -18,7 +18,7 @@ const GetStarted = () => {
 
 
 
-            <div className='flex justify-between gap-16 mt-5'>
+            <div className='flex flex-col md:flex-row justify-between gap-16 mt-5'>
 
 
 
@@ -45,8 +45,8 @@ const GetStarted = () => {
                         <h1 className="text-xl font-bold"> Choose Products </h1>
                         <p className="text-center py-3"> Browse our catalog and select the tools
                             that fit your needs. </p>
-
                     </div>
+
                 </div>
 
                 <div className='relative flex flex-col gap-20'>
@@ -61,19 +61,9 @@ const GetStarted = () => {
                             tools immediately. </p>
 
                     </div>
-                </div>
-
-
-
-                
+                </div>                
 
             </div>
-
-
-
-
-
-
 
 
         </div>

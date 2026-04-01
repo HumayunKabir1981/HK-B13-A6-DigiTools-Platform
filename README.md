@@ -19,9 +19,11 @@
 
 ## 1.Dynamic Cart System:
 ### Users can add, remove products, and see real-time cart updates with total price calculation.
+
 <br />
 ## 2.  Product & Cart Toggle View: 
 ### Easily switch between product listing and cart view with a smooth UI experience.
+
 <br />
 ## 3.  Interactive Notifications:
 ### Beautiful toast notifications for add to cart, remove items, and checkout actions.

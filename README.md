@@ -6,7 +6,7 @@
 
 <br /><br />
 
-# Technology that you use :
+# Technology that my use :
 ### 1. React.js
 ### 2.Tailwind CSS
 ### 3.  DaisyUI
@@ -14,7 +14,7 @@
 ### 5.  Vite
 <br /><br />
 
-# 3 Features about your project. :
+# 3 Features about my project. :
 
 
 ## 1.Dynamic Cart System:
